@@ -5,5 +5,5 @@ import { PartyDetailsComponent } from './party-details.component';
 export const PARTIES_DECLARATIONS = [
     PartiesFormComponent,
     PartiesListComponent,
-    PartyDetailsComponent
+    PartyDetailsComponent,
 ];

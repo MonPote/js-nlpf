@@ -9,6 +9,8 @@ import {AppComponent} from "./app.component";
 import { PARTIES_DECLARATIONS } from './parties';
 import { routes, ROUTES_PROVIDERS } from './app.routes';
 
+import { Home } from './home/home.component';
+
 
 @NgModule({
     imports: [
@@ -20,7 +22,8 @@ import { routes, ROUTES_PROVIDERS } from './app.routes';
     ],
     declarations: [
         AppComponent,
-        ...PARTIES_DECLARATIONS
+        ...PARTIES_DECLARATIONS,
+        Home
     ],
     bootstrap: [
         AppComponent
