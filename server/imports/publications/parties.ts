@@ -1,5 +1,6 @@
 import { Meteor } from 'meteor/meteor';
 import { Parties } from '../../../both/collections/parties.collection';
+import { Projects } from '../../../both/collections/projects.collection'
 
 Meteor.publish('parties', function() {
     const selector = {
@@ -22,3 +23,5 @@ Meteor.publish('parties', function() {
 
     return Parties.find(selector);
 });
+
+Meteor.publish('getAllProject', () => Projects.find());

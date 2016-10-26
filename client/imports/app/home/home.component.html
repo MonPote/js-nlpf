@@ -1,7 +1,9 @@
-<nav class="navbar navbar-default">
-    <a class="navbar-brand" href="#">Accueil</a>
-    <a class="navbar-brand" href="#">Meilleurs projets</a>
-    <a class="navbar-brand" href="#">Créer un projet</a>
-
-    <a class="navbar-brand navbar-right" href="#">Connexion/Inscription</a>
-</nav>
+<div class="row">
+    <ul>
+        <li *ngFor="let project of projects | async">
+            <a [routerLink]="['/project', project._id]">{{project.name}}</a>
+            <p>{{project.name}}</p>
+            <button (click)="removeParty(project)">X</button>
+        </li>
+    </ul>
+</div>
