@@ -7,10 +7,12 @@ import { Subscription } from 'rxjs/Subscription';
 import { Project } from "../../../../both/models/project.model";
 import { Projects } from '../../../../both/collections/projects.collection';
 
+import style from './home.component.scss';
 
 @Component({
     selector: 'home',
-    template
+    template,
+    styles: [ style ]
 })
 
 export class Home implements OnInit, OnDestroy {
