@@ -7,4 +7,6 @@ import template from './project-creation.component.html';
     template
 })
 
-export class ProjectCreationComponent{}
+export class ProjectCreationComponent {
+
+}
