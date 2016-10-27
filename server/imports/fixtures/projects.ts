@@ -9,20 +9,23 @@ export function loadProjects() {
             gain: 120,
             description: "Description",
             creationDate: '12-12-2016',
-            parties: {
+            compensation: [{
                 title: 'ttest',
                 toto: 'trus',
-            }
+            }]
         },{
             name : 'Project dos',
             author: 'tata',
             gain: 120000,
             description: "Description2",
             creationDate: '01-01-2016',
-            parties: {
+            compensation: [{
                 title: 'ttest',
                 toto: 'trus',
-            }
+            }, {
+                title: 'fdgfdjkgh',
+                toto: 'fjdkfjd',
+            }]
         }];
 
         projects.forEach((project: Project) => Projects.insert(project));

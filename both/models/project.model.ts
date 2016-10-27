@@ -6,8 +6,8 @@ export interface Project extends CollectionObject {
     author: string;
     gain: number;
     creationDate: string;
-    parties: {
+    compensation: [{
         title: string;
         toto: string;
-    };
+    }];
 }
