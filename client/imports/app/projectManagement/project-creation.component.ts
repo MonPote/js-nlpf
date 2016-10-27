@@ -48,7 +48,9 @@ export class ProjectCreationComponent implements OnInit {
 
         // console.log(Object.assign({}, this.createProjectForm.value, comp));
         Projects.insert(Object.assign({}, this.createProjectForm.value, comp));
-
+        
+        this.compensationFormList = [];
+        this.compensationsForm.reset();
         this.createProjectForm.reset();
     }
 }
