@@ -37,7 +37,14 @@ export class ProjectCreationComponent implements OnInit {
 
     addCompensation(): void {
         this.compensationFormList.push(this.compensationsForm.value);
+        console.log(this.compensationFormList);
         this.compensationsForm.reset();
+    }
+
+    deleteCompensation(compensation): void {
+        let index = this.compensationFormList.indexOf(compensation);
+        this.compensationFormList.splice(index, 1);
+        console.log('index = ', index);
     }
 
     submitProject(): void {
@@ -46,9 +53,8 @@ export class ProjectCreationComponent implements OnInit {
             compensations: this.compensationFormList
         }
 
-        // console.log(Object.assign({}, this.createProjectForm.value, comp));
         Projects.insert(Object.assign({}, this.createProjectForm.value, comp));
-        
+
         this.compensationFormList = [];
         this.compensationsForm.reset();
         this.createProjectForm.reset();
