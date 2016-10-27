@@ -24,11 +24,6 @@ export class ProjectCreationComponent implements OnInit {
             author: [''],
             gain: [0],
             creationDate: [''],
-            compensations: [{
-                title: [''],
-                value: [0],
-                description: [''],
-            }],
         });
 
         this.compensationsForm = this.formBuilder.group({
@@ -42,15 +37,18 @@ export class ProjectCreationComponent implements OnInit {
 
     addCompensation(): void {
         this.compensationFormList.push(this.compensationsForm.value);
-        console.log(this.compensationFormList);
-
         this.compensationsForm.reset();
     }
 
     submitProject(): void {
         console.log('hello');
-        console.log(this.createProjectForm.value);
-        Projects.insert(this.createProjectForm.value);
+        let comp = {
+            compensations: this.compensationFormList
+        }
+
+        // console.log(Object.assign({}, this.createProjectForm.value, comp));
+        Projects.insert(Object.assign({}, this.createProjectForm.value, comp));
+
         this.createProjectForm.reset();
     }
 }
