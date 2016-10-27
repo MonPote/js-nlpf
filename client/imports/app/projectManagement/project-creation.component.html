@@ -81,7 +81,7 @@
                                 <div class="col-lg-10"><span>{{compensation.description}}</span></div>
                             </div>
                             <div class="row">
-                                <button class="col-lg-offset-8 btn btn-warning">Modifier</button>
+                                <button class="col-lg-offset-8 btn btn-warning" (click)="modifyCompensation(compensation)">Modifier</button>
                                 <button class="btn btn-danger" (click)="deleteCompensation(compensation)">Supprimer</button>
                             </div>
                         </div>
