@@ -69,9 +69,20 @@
                     </div>
                 </form>
                 <div *ngFor="let compensation of compensationFormList">
-                    <div>
-                        {{compensation.title}}
+                    <div class="panel panel-default">
+                        <div class="panel-heading">{{compensation.title}}</div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <label class="col-lg-2 control-label">Valeur (en € / mois)</label>
+                                <div class="col-lg-10"><span>{{compensation.value}}</span></div>
+                            </div>
+                            <div class="row">
+                                <label class="col-lg-2 control-label">Description</label>
+                                <div class="col-lg-10"><span>{{compensation.description}}</span></div>
+                            </div>
+                        </div>
                     </div>
+
                 </div>
             </div>
         </div>
