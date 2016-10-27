@@ -22,6 +22,10 @@ export class ProjectCreationComponent implements OnInit {
             author: [''],
             gain: [0],
             creationDate: [''],
+            parties: {
+                title: [''],
+                toto: [''],
+            }
         });
     }
 

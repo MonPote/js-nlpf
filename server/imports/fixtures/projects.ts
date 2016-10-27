@@ -8,13 +8,21 @@ export function loadProjects() {
             author: 'toto',
             gain: 120,
             description: "Description",
-            creationDate: '12-12-2016'
+            creationDate: '12-12-2016',
+            parties: {
+                title: 'ttest',
+                toto: 'trus',
+            }
         },{
             name : 'Project dos',
             author: 'tata',
             gain: 120000,
             description: "Description2",
-            creationDate: '01-01-2016'
+            creationDate: '01-01-2016',
+            parties: {
+                title: 'ttest',
+                toto: 'trus',
+            }
         }];
 
         projects.forEach((project: Project) => Projects.insert(project));
