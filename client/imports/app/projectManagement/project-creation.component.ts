@@ -4,16 +4,19 @@ import { Projects } from '../../../../both/collections/projects.collection'
 import { Observable } from 'rxjs/Observable';
 
 import template from './project-creation.component.html';
+import {InjectUser} from "angular2-meteor-accounts-ui";
 
 @Component({
     selector: 'project-creation',
     template
 })
 
+@InjectUser('user')
 export class ProjectCreationComponent implements OnInit {
     createProjectForm: FormGroup;
     compensationsForm: FormGroup;
     compensationFormList: Observable<Object[]>;
+    user: Meteor.User;
 
     constructor(private formBuilder: FormBuilder) {}
 
