@@ -1,6 +1,6 @@
 import { Meteor } from 'meteor/meteor';
 import { Parties } from '../../../both/collections/parties.collection';
-import { Projects } from '../../../both/collections/projects.collection'
+import { Projects } from '../../../both/collections/projects.collection';
 
 Meteor.publish('parties', function() {
     const selector = {

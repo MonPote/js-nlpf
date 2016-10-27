@@ -5,32 +5,32 @@
         <div class="panel panel-default">
             <div class="panel-heading">Informations générales</div>
             <div class="panel-body">
-                <form class="form-horizontal">
+                <form class="form-horizontal" [formGroup]="createProjectForm" (ngSubmit)="submitProject()">
                     <div class="form-group">
                         <label class="col-lg-2 control-label">Nom du projet</label>
                         <div class="col-lg-10">
-                            <input class="form-control">
+                            <input class="form-control" formControlName="name">
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label class="col-lg-2 control-label">Description</label>
                         <div class="col-lg-10">
-                            <input class="form-control">
+                            <input class="form-control" formControlName="description">
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label class="col-lg-2 control-label">Auteur</label>
                         <div class="col-lg-10">
-                            <input class="form-control">
+                            <input class="form-control" formControlName="author">
                         </div>
                     </div>
 
                     <div class="form-group">
                         <div class="col-lg-offset-2 col-lg-10">
                             <!--<button type="submit" class="btn btn-default">Sign in</button>-->
-                            <button class="btn btn-success"> Enregistrer les modifications</button>
+                            <button type="submit" class="btn btn-success"> Enregistrer les modifications</button>
                         </div>
                     </div>
                 </form>
