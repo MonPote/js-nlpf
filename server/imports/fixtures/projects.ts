@@ -9,22 +9,25 @@ export function loadProjects() {
             gain: 120,
             description: "Description",
             creationDate: '12-12-2016',
-            compensation: [{
+            compensations: [{
                 title: 'ttest',
-                toto: 'trus',
+                value: 23,
+                description: 'fdsfsdfds',
             }]
         },{
             name : 'Project dos',
             author: 'tata',
-            gain: 120000,
+            gain: 1200,
             description: "Description2",
             creationDate: '01-01-2016',
-            compensation: [{
+            compensations: [{
                 title: 'ttest',
-                toto: 'trus',
+                value: 23,
+                description: '',
             }, {
-                title: 'fdgfdjkgh',
-                toto: 'fjdkfjd',
+                title: 'ttest',
+                value: 243,
+                description: 'fdfsgahjdjsahdjsahdksahjkd',
             }]
         }];
 

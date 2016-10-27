@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Projects } from '../../../../both/collections/projects.collection'
+import { Observable } from 'rxjs/Observable';
 
 import template from './project-creation.component.html';
 
@@ -10,8 +11,9 @@ import template from './project-creation.component.html';
 })
 
 export class ProjectCreationComponent implements OnInit {
-    toto: string;
     createProjectForm: FormGroup;
+    compensationsForm: FormGroup;
+    compensationFormList: Observable<Object[]>;
 
     constructor(private formBuilder: FormBuilder) {}
 
@@ -22,11 +24,27 @@ export class ProjectCreationComponent implements OnInit {
             author: [''],
             gain: [0],
             creationDate: [''],
-            parties: {
+            compensations: [{
                 title: [''],
-                toto: [''],
-            }
+                value: [0],
+                description: [''],
+            }],
         });
+
+        this.compensationsForm = this.formBuilder.group({
+            title: [''],
+            value: [''],
+            description: ['']
+        });
+
+        this.compensationFormList = [];
+    }
+
+    addCompensation(): void {
+        this.compensationFormList.push(this.compensationsForm.value);
+        console.log(this.compensationFormList);
+
+        this.compensationsForm.reset();
     }
 
     submitProject(): void {
