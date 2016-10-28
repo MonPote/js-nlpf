@@ -8,7 +8,7 @@ import { ProjectDisplayComponent } from './projectManagement/project-display.com
 export const routes: Route[] = [
     { path: '', component: Home },
     { path: 'projectCreation', component: ProjectCreationComponent },
-    { path: 'project/:project._id', component: ProjectDisplayComponent }
+    { path: 'project/:projectId', component: ProjectDisplayComponent }
 ];
 
 export const ROUTES_PROVIDERS = [{

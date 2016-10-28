@@ -62,7 +62,6 @@ export class ProjectCreationComponent implements OnInit {
             compensations: this.compensationFormList
         };
 
-        Projects.insert(this.createProjectForm.value);
         Projects.insert(Object.assign({}, this.createProjectForm.value, comp));
 
         this.compensationFormList = [];
