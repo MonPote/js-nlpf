@@ -1,20 +1,20 @@
-import { Component } from '@angular/core';
-import template from './project-display.component.html';
+import {Component, OnInit} from '@angular/core';
+
 import {ActivatedRoute} from "@angular/router";
 import { Projects } from '../../../../both/collections/projects.collection';
 import {Project} from "../../../../both/models/project.model";
 import {ObservableCursor} from "meteor-rxjs";
+
+import template from './project-display.component.html';
 
 @Component({
     selector: 'project-display',
     template
 })
 
-export class CompensationSubComponent {
+export class CompensationSubComponent implements OnInit  {
     projectId: string;
-    //description: string;
     project: Project;
-    compensationFormList: Object[];
 
     constructor(
         private route: ActivatedRoute
@@ -25,9 +25,7 @@ export class CompensationSubComponent {
             .map(params => params['projectId'])
             .subscribe(projectId => {
                     this.projectId = projectId;
-                    this.project = Projects.findOne(this.projectId);
-                    this.compensationFormList = this.project.compensations;
-                    console.log(this.project);
+                    // this.project = Projects.findOne(this.projectId);
                 }
             );
     }

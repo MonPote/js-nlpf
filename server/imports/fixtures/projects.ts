@@ -33,7 +33,7 @@ export function loadProjects() {
             name: 'Beryllium',
             author: 'Group',
             gain: 1200,
-            description: 'Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l\'imprimerie',
+            description: 'Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l imprimerie',
             creationDate: '01-01-2016',
             compensations: [{
                 title: 'ttest',

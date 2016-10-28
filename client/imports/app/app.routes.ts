@@ -10,8 +10,8 @@ import { HomeBest } from './home/home-best.component';
 export const routes: Route[] = [
     { path: '', component: Home },
     { path: 'projectCreation', component: ProjectCreationComponent },
-    { path: 'project/:projectId', component: ProjectDisplayComponent },
-    { path: 'myproj/:projectId', component: CompensationSubComponent },
+    { path: 'compensationSub/:projectId', component: CompensationSubComponent },
+    { path: 'projectDisplay/:projectId', component: ProjectDisplayComponent },
     { path: 'best', component: HomeBest},
 ];
 
