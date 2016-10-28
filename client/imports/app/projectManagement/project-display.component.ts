@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import template from './project-display.component.html';
 import {ActivatedRoute} from "@angular/router";
 import { Projects } from '../../../../both/collections/projects.collection';
+import {Project} from "../../../../both/models/project.model";
 
 @Component({
     selector: 'project-display',
@@ -10,7 +11,8 @@ import { Projects } from '../../../../both/collections/projects.collection';
 
 export class ProjectDisplayComponent {
     projectId: string;
-    description: string;
+    //description: string;
+    project: Project;
 
     constructor(
         private route: ActivatedRoute
@@ -21,7 +23,7 @@ export class ProjectDisplayComponent {
             .map(params => params['projectId'])
             .subscribe(projectId => {
                     this.projectId = projectId;
-                    this.description = Projects.findOne(this.projectId).description;
+                    this.project = Projects.findOne(this.projectId);
                 }
             );
     }
