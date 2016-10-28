@@ -55,21 +55,15 @@ export class ProjectCreationComponent implements OnInit {
     deleteCompensation(compensation): void {
         const index = this.compensationFormList.indexOf(compensation);
         this.compensationFormList.splice(index, 1);
-        console.log('index = ', index);
     }
 
     submitProject(): void {
         const comp = {
             compensations: this.compensationFormList
-        }
-
+        };
 
         Projects.insert(this.createProjectForm.value);
-
         Projects.insert(Object.assign({}, this.createProjectForm.value, comp));
-
-
-
 
         this.compensationFormList = [];
         this.compensationsForm.reset();
