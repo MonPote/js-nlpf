@@ -27,6 +27,7 @@ export class ProjectDisplayComponent {
                     this.projectId = projectId;
                     this.project = Projects.findOne(this.projectId);
                     this.compensationFormList = this.project.compensations;
+                console.log(this.project);
                 }
             );
     }

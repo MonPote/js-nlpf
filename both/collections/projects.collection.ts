@@ -6,5 +6,5 @@ export const Projects = new MongoObservable.Collection<Project>('projects');
 Projects.allow({
     insert: function() {
         return true;
-    }
+    },
 });

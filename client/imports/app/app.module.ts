@@ -11,6 +11,7 @@ import { routes, ROUTES_PROVIDERS } from './app.routes';
 import { HOME_DECLARATIONS } from "./home/index";
 import { PROJECTMANAGEMENT_DECLARATIONS } from "./projectManagement/index";
 
+
 @NgModule({
     imports: [
         BrowserModule,
